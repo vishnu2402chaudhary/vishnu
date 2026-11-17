@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brushify</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: white;
+        }
+
+        #box {
+            width: 350px;
+            height: 250px;
+            border: 4px solid black;
+            margin: 75px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        #text {
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            resize: none;
+            text-align: center;
+            font-size: 22px;
+            background: transparent;
+            color: black;
+            padding: 10px;
+            overflow-wrap: break-word;
+            white-space: pre-wrap;
+        }
+
+        .main {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 100px;
+        }
+
+        .option {
+            width: 280px;
+            min-height: 150px;
+            border: 4px solid black;
+            padding: 10px;
+            background-color: white;
+        }
+
+        button {
+            width: 35px;
+            height: 35px;
+            border: 3px solid black;
+            border-radius: 50%;
+            margin: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            transform: scale(1.15);
+        }
+
+        .option:last-child button {
+            background-color: white;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Brushify Text Editor</h2>
+
+    <div id="box">
+        <textarea id="text" placeholder="Write Something Here..."></textarea>
+    </div>
+
+    <div class="main">
+
+        <div class="option">
+            <h4>Change Text Color</h4>
+
+            <button style="background:red" onclick="textColor('red')"></button>
+            <button style="background:blue" onclick="textColor('blue')"></button>
+            <button style="background:green" onclick="textColor('green')"></button>
+            <button style="background:orange" onclick="textColor('orange')"></button>
+            <button style="background:purple" onclick="textColor('purple')"></button>
+            <button style="background:brown" onclick="textColor('brown')"></button>
+            <button style="background:pink" onclick="textColor('pink')"></button>
+            <button style="background:gray" onclick="textColor('gray')"></button>
+            <button style="background:navy" onclick="textColor('navy')"></button>
+            <button style="background:black" onclick="textColor('black')"></button>
+        </div>
+
+        <div class="option">
+            <h4>Change Background Color</h4>
+
+            <button style="background:red" onclick="changeBG('red')"></button>
+            <button style="background:blue" onclick="changeBG('blue')"></button>
+            <button style="background:green" onclick="changeBG('green')"></button>
+            <button style="background:yellow" onclick="changeBG('yellow')"></button>
+            <button style="background:pink" onclick="changeBG('pink')"></button>
+            <button style="background:orange" onclick="changeBG('orange')"></button>
+            <button style="background:lightblue" onclick="changeBG('lightblue')"></button>
+            <button style="background:lightgreen" onclick="changeBG('lightgreen')"></button>
+            <button style="background:gray" onclick="changeBG('gray')"></button>
+            <button style="background:white" onclick="changeBG('white')"></button>
+        </div>
+
+        <div class="option">
+            <h4>Change Font Family</h4>
+
+            <button onclick="fontChange('Arial')">Aa</button>
+            <button onclick="fontChange('Georgia')">Aa</button>
+            <button onclick="fontChange('Verdana')">Aa</button>
+            <button onclick="fontChange('Tahoma')">Aa</button>
+            <button onclick="fontChange('Impact')">Aa</button>
+            <button onclick="fontChange('cursive')">Aa</button>
+            <button onclick="fontChange('monospace')">Aa</button>
+            <button onclick="fontChange('fantasy')">Aa</button>
+            <button onclick="fontChange('serif')">Aa</button>
+            <button onclick="fontChange('sans-serif')">Aa</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function textColor(color) {
+            document.getElementById("text").style.color = color;
+        }
+
+        function changeBG(color) {
+            document.getElementById("box").style.backgroundColor = color;
+        }
+
+        function fontChange(font) {
+            document.getElementById("text").style.fontFamily = font;
+        }
+
+    </script>
+
+</body>
+</html>
